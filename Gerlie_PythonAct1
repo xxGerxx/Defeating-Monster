@@ -30,7 +30,7 @@ def monsterApproach(character_health,monster_health):
                         print("\n" +str (name)+" :" + str (character_health) +"  "+monster+":" + str (monster_health))
                     else:
                         print("\n" +str (name)+"'s " + "Health:" + str (character_health) +"\n")
-                        print("Congratulations!! You have defeated the "+monster+"!\n")
+                        print("Congratulations!! The "+monster+" has been defeated\n")
                         print("Here's a little gift. Hope You enjoy it") 
                         time.sleep(1)
                         print(random.choice(gift)+"\n")
