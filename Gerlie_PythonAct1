@@ -8,7 +8,6 @@ gift = ["100 gems", "Rare Gold Fish"]
 
 #printing monster's name and health 
 def life():
-    print("")
     print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp" + " is approaching! \n")
 
 #loop for the fight
