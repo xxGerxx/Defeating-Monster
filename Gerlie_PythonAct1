@@ -1,9 +1,7 @@
 import random
 import time
 character_health = 100
-attack_marksman = [10,20]
-attack_mage = [10,30]
-attack_assassin = [10,40]
+ch_attack = [10,30]
 gift = ["100 gems", "Rare Gold Fish"]
 
 #printing monster's name and health 
@@ -37,9 +35,16 @@ def monsterApproach(character_health,monster_health):
                         break
                 #monster health is greater than 30
                 else:
-                    monster_health -= random.choice(attack_marksman)
-                    if random.choice == 10:
+                    monster_health -= random.choice(ch_attack)
+                    if monster_health == 10:
                         print(monster+" was damaged 10pt!")
+                        print("\n" +str (name)+" :" + str (character_health) +"  "+monster+":" + str (monster_health))
+                        time.sleep(1)
+                        print("\n "+monster+"  is preparing to attack! \n")
+                        time.sleep(2)
+                        character_health -= 10
+                        print("Your character was damaged")
+                        print("\n" +str (name)+" :" + str (character_health) +"  "+monster+":" + str (monster_health))
                     else:
                         print("\n " +monster+" was hitted by a Critical Hit!")
                         print("\n" +str (name)+" :" + str (character_health) +"  "+monster+":" + str (monster_health))
@@ -93,7 +98,7 @@ elif v == 2:
 
 elif v == 3:
     #damages the monster
-    print("You have entered the dungeon")
+    print("\nYou have entered the dungeon")
     print("We are pleased to welcome you here inside. Fight monsters that will go on your way for you to recieve a special git! We hope for the best! Good Luck!\n")
     
     #different types of monsters
@@ -149,5 +154,4 @@ elif v == 3:
 else:
     print("Invalid input")
     print("Your character's Health: " + str(character_health))
-    
     
