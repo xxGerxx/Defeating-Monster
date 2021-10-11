@@ -147,7 +147,6 @@ elif v == 3:
         monsterApproach(character_health,monster_health)
     else:
         print("Invalid input")
-       
 else:
     print("Invalid input")
     print("Your character's Health: " + str(character_health))
