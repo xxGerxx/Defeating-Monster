@@ -63,7 +63,7 @@ def monsterApproach(character_health,monster_health):
 
 
 name = input("Enter your name: ")
-print("Hello " + name)
+print("Hello there," + name "\n")
 
 v = int(input("Choose 1 if you want to cross the river\nChoose 2 if you want to jump on the ravine\nChoose 3 if you want to fight monster in the dungeon \nInput: "))
 if v == 1: 
