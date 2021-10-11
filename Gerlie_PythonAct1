@@ -6,11 +6,15 @@ attack_mage = [10,30]
 attack_assassin = [10,40]
 gift = ["100 gems", "Rare Gold Fish"]
 
+#printing monster's name and health 
+def life():
+    print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp" + " is approaching!")
+
 #loop for the fight
 def monsterApproach(character_health,monster_health):
     while character_health > 0:
         if monster_health != 0:
-            action = int(input("What do you want to do?\n [1] Attack \n [2] Health Power Up \n [3] Leave Game \n Action:" ))
+            action = int(input("So, what's your course of action?\n [1] Attack \n [2] Health Power Up \n [3] Leave Game \n Action:" ))
             if action == 1:
                 #monster health is less than 30
                 if monster_health <= 30:
@@ -110,25 +114,30 @@ elif v == 3:
         attack = [15,25]
             
 
-    hero = int(input("What character do you want to be?\n Choose from: \n [1] Marksman \n [2] Mage \n [3] Assassin \n Choice:"))
+    hero = int(input("What kind of hero would you like to perform?\n Choose from: \n [1] Marksman \n [2] Mage \n [3] Assassin \n Choice:"))
     #marksman
     if hero == 1:
         print("You have selected Marksman.\n")
-        print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp"+" is approaching! \n")
+        #TODO: printing monster's name and health
+        life()
         #TODO: monster is approaching
         monsterApproach(character_health,monster_health)
                 
             
     #mage
     elif hero == 2:
-        print("You have selected Mage.\n")  
-        print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp"+ " is approaching!")  
+        print("You have selected Mage.\n")
+        #TODO: printing monster's name and health 
+        life()
+        #TODO: monster is approaching
         monsterApproach(character_health,monster_health)
                 
     #assassin
     elif hero == 3:
-        print("You have selected Assassin.\n") 
-        print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp" + " is approaching!")
+        print("You have selected Assassin.\n")
+        #TODO: printing monster's name and health
+        life()
+        #TODO: monster is approaching
         monsterApproach(character_health,monster_health)
     else:
         print("Invalid input")
