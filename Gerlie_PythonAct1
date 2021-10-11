@@ -114,7 +114,7 @@ elif v == 3:
         attack = [15,25]
             
 
-    hero = int(input("What kind of hero would you like to perform?\n Choose from: \n [1] Marksman \n [2] Mage \n [3] Assassin \n Choice:"))
+    hero = int(input("What kind of character would you like to perform?\n Choose from: \n [1] Marksman \n [2] Mage \n [3] Assassin \n Choice:"))
     #marksman
     if hero == 1:
         print("You have selected Marksman.\n")
