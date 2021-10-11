@@ -8,7 +8,8 @@ gift = ["100 gems", "Rare Gold Fish"]
 
 #printing monster's name and health 
 def life():
-    print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp" + " is approaching!")
+    print("")
+    print("A monster named "+str(monster)+" with "+ str(monster_health) +"hp" + " is approaching! \n")
 
 #loop for the fight
 def monsterApproach(character_health,monster_health):
@@ -50,12 +51,16 @@ def monsterApproach(character_health,monster_health):
                         print("Your character was damaged")
                         print("\n" +str (name)+" :" + str (character_health) +"  "+monster+":" + str (monster_health))
             elif action == 2:
-                character_health += 20
-                print("Character Power up!")
-                time.sleep(2)
-                print("\n" + str (name)+":  " + str (character_health) + "  " + monster + " :"+ str (monster_health))
-                time.sleep(1)
-                continue
+                if character_health <=10:
+                    character_health += 20
+                    print("Character Power up!")
+                    time.sleep(2)
+                    print("\n" + str (name)+":  " + str (character_health) + "  " + monster + " :"+ str (monster_health))
+                    time.sleep(1)
+                    continue
+                else:
+                    print("Your character is in full health")
+                    continue
             elif action == 3:
                 break
             else:
@@ -90,6 +95,7 @@ elif v == 2:
 elif v == 3:
     #damages the monster
     print("You have entered the dungeon")
+    print("We are pleased to welcome you here inside. Fight monsters that will go on your way for you to recieve a special git! We hope for the best! Good Luck!\n")
     
     #different types of monsters
     chance = random.randint(0,3)
@@ -144,4 +150,6 @@ elif v == 3:
        
 else:
     print("Invalid input")
-print("Your character's Health: " + str(character_health))
+    print("Your character's Health: " + str(character_health))
+    
+    
